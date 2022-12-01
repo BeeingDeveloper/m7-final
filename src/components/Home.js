@@ -71,7 +71,7 @@ const Home = () => {
 
 
     const onSubmit=()=>{
-        if(!validName || !validEmail || (password !== confirmPassword) ){
+        if(!validName || !validEmail || (password !== confirmPassword) || !validPassword){
             console.log("Invalid")
             setRedAlert(true);
             setGreenAlert(false);
@@ -81,6 +81,8 @@ const Home = () => {
                 alert("Enter valid email");
             }else if(password !== confirmPassword){
                 alert("Password did not matched");
+            }else if(password.length < 5){
+                alert("Password is too short");
             }
         }else{
             setRedAlert(false);
