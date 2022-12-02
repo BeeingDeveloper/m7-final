@@ -5,7 +5,7 @@ import Home from './components/Home';
 import Profile from './components/Profile';
 function App() {
   return (
-    <div className="bg-black h-screen w-screen  text-slate-200">
+    <div className="bg-black h-screen overflow-hidden w-screen  text-slate-200">
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
